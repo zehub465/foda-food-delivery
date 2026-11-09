@@ -16,7 +16,10 @@ requireRole('Admin');
             <a href="../admin_food.php">Food Items</a>
             <a href="../admin_orders.php">Orders</a>
             <a href="../admin_users.php">Users</a>
-            <a href="../logout.php">Logout</a>
+            <form method="post" action="../logout.php" class="logout-form">
+                <?= csrfField() ?>
+                <button type="submit" class="nav-logout">Logout</button>
+            </form>
         </nav>
     </div>
 </header>
